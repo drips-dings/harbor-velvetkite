@@ -1,0 +1,32 @@
+{
+  "__file": "package.json",
+  "name": "harbor-velvetkite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "latest",
+    "@coinbase/onchainkit": "latest",
+    "viem": "latest",
+
+    "base-web": "github:base/web",
+    "base-node": "github:base/node",
+    "base-docs": "github:base/docs",
+    "base-smart-wallet": "github:base/smart-wallet",
+
+    "coinbase-agentkit": "github:coinbase/agentkit",
+    "coinbase-x402": "github:coinbase/x402",
+    "coinbase-onchainkit-repo": "github:coinbase/onchainkit",
+    "coinbase-wallet-sdk-repo": "github:coinbase/coinbase-wallet-sdk",
+    "coinbase-smart-wallet-repo": "github:coinbase/smart-wallet",
+    "coinbase-base": "github:coinbase/base"
+  },
+  "devDependencies": {
+    "vite": "latest",
+    "typescript": "latest"
+  }
+}
