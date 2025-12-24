@@ -1,0 +1,26 @@
+{
+  "addresses": {
+    "zero": "0x0000000000000000000000000000000000000000",
+    "exampleEOA": "0x1111111111111111111111111111111111111111",
+    "exampleContract": "0x2222222222222222222222222222222222222222",
+    "burn": "0x000000000000000000000000000000000000dEaD"
+  },
+  "tokens": {
+    "native": {
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "exampleERC20": {
+      "address": "0x3333333333333333333333333333333333333333",
+      "symbol": "TKN",
+      "decimals": 18
+    }
+  },
+  "usage": {
+    "network": "base-sepolia",
+    "purpose": "Repeatable read-only probing (balances, code checks, metadata)."
+  },
+  "notes": {
+    "warning": "Placeholder values only. Never use real user addresses, keys, or production tokens."
+  }
+}
