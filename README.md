@@ -1,7 +1,5 @@
 # Harbor Velvetkite (Built for Base)
 
-Deployed on Base Mainnet.
-
 Harbor Velvetkite is a developer-facing Base console that prioritizes verification. It connects a Coinbase Wallet, confirms the active Base chainId (8453 / 84532), and runs read-only probes that point back to Basescan for independent cross-checking.
 
 ## Base networks
@@ -13,10 +11,6 @@ Explorer: https://sepolia.basescan.org
 Base Mainnet  
 chainId (decimal): 8453  
 Explorer: https://basescan.org  
-
-Base Mainnet onchain references (verification placeholders):
-- https://basescan.org/address/your_address
-- https://basescan.org/address/your_address#code  
 
 ## What you can do with it
 
@@ -31,7 +25,7 @@ All operations are strictly read-only. No transactions are signed or broadcast.
 
 ## Repository layout
 
-- app.harbor-velvetkite.ts  
+- app/harbor-velvetkite.ts  
   Browser script that renders a tiny UI and performs Base RPC reads.
 
 - config/base.networks.json  
@@ -40,17 +34,12 @@ All operations are strictly read-only. No transactions are signed or broadcast.
 - docs/architecture.md  
   Short design notes on Base alignment, the read-only approach, and dependency choices.
 
-- docs/validation-notes.md  
-  Testnet validation notes and explorer checks recorded during Base Sepolia runs.
-
 - scripts/sample-addresses.json  
   Example addresses/tokens for repeatable probing.
 
 - contracts/  
   Solidity contracts deployed to Base Sepolia for testnet validation:
-  - your_contract.sol — minimal contract used to validate deployment and verification flow  
-  - your_contract.sol — simple stateful contract for interaction testing  
-  - your_contract.sol — lightweight registry contract used for read-only queries  
+  - ERC721.sol — smart contract that implements the ERC-721 (NFT) standard
 
 - package.json  
   Dependency manifest referencing Base + Coinbase repositories.
@@ -74,9 +63,11 @@ Copyright (c) 2025 YOUR_NAME
 
 ## Author
 
-GitHub: https://github.com/your-handle  
-Email: you@example.com  
-Public contact: https://x.com/your-handle  
+GitHub: https://github.com/drips-dings
+
+Email: drips_dings_0q@icloud.com 
+
+Public contact: https://x.com/nancy_bx58 
 
 ## Testnet Deployment (Base Sepolia)
 
@@ -86,24 +77,11 @@ Network: Base Sepolia
 chainId (decimal): 84532  
 Explorer: https://sepolia.basescan.org  
 
-Contract #1 address:  
-your_address
+Contract ERC721.sol address:  
+0x1370F5C79512562d943f3B05BD603dEF2B7cCeba
 
 Deployment and verification:
-- https://sepolia.basescan.org/address/your_adress
-- https://sepolia.basescan.org/your_address/0#code  
+- https://sepolia.basescan.org/address/0x1370F5C79512562d943f3B05BD603dEF2B7cCeba
+- https://sepolia.basescan.org/0x1370F5C79512562d943f3B05BD603dEF2B7cCeba/0#code  
 
-Contract #2 address:  
-your_address
-
-Deployment and verification:
-- https://sepolia.basescan.org/address/your_address
-- https://sepolia.basescan.org/your_address/0#code  
-
-Contract #3 address:  
-your_address
-
-Deployment and verification:
-- https://sepolia.basescan.org/address/your_address
-- https://sepolia.basescan.org/your_address/0#code 
 These testnet deployments provide a controlled environment for validating Base tooling, account abstraction flows, and read-only onchain interactions prior to Base Mainnet usage.
